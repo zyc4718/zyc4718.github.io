@@ -102,7 +102,7 @@
                     </div>
                     <div class="bg-green-50 p-6 rounded-lg border border-green-200">
                         <h3 class="text-xl font-bold text-green-800 mb-3">中期路线图 (6-12个月)</h3>
-                        <p class="text-green-700">研究显著性能飞跃的架构级增强，深入设计与模型改进。</p>
+                        <p class="text-green-700">研究显著性能及专用于水下场景的视频压缩模型，深入设计与模型改进。</p>
                     </div>
                     <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
                         <h3 class="text-xl font-bold text-purple-800 mb-3">长期愿景 (12个月+)</h3>
@@ -378,19 +378,19 @@
             const ctx = document.getElementById('roadmapChart').getContext('2d');
             const chartData = {
                 datasets: [{
-                    label: '短期 (6-12个月)',
+                    label: '短期 (3-6个月)',
                     data: techData.filter(d => ['2505.02720', '2506.01229', '2506.01221', '2505.14541'].includes(d.id)).map(d => ({ x: d.difficulty, y: d.impact, r: d.priority })),
                     backgroundColor: 'rgba(59, 130, 246, 0.6)',
                     borderColor: 'rgba(37, 99, 235, 1)',
                     borderWidth: 2
                 }, {
-                    label: '中期 (12-24个月)',
+                    label: '中期 (6-12个月)',
                     data: techData.filter(d => ['2405.08530', '2506.07709', '2505.09193'].includes(d.id)).map(d => ({ x: d.difficulty, y: d.impact, r: d.priority })),
                     backgroundColor: 'rgba(16, 185, 129, 0.6)',
                     borderColor: 'rgba(5, 150, 105, 1)',
                     borderWidth: 2
                 }, {
-                    label: '长期 (24个月+)',
+                    label: '长期 (12个月+)',
                     data: techData.filter(d => ['2505.16091', '2505.22438'].includes(d.id)).map(d => ({ x: d.difficulty, y: d.impact, r: d.priority })),
                     backgroundColor: 'rgba(168, 85, 247, 0.6)',
                     borderColor: 'rgba(147, 51, 234, 1)',
