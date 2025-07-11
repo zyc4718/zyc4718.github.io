@@ -330,7 +330,7 @@
                         <p class="text-gray-600 leading-relaxed">${item.integration}</p>
                     </div>
                      <div>
-                        <h4 class="font-bold text-lg text-gray-800 mb-2 border-l-4 border-purple-500 pl-3">深层价值剖析</h4>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2 border-l-4 border-purple-500 pl-3">深度分析</h4>
                         <p class="text-gray-600 leading-relaxed">${item.value}</p>
                     </div>
                 </div>
@@ -379,13 +379,13 @@
             const chartData = {
                 datasets: [{
                     label: '短期 (3-6个月)',
-                    data: techData.filter(d => ['2505.02720', '2506.01229', '2506.01221', '2505.14541'].includes(d.id)).map(d => ({ x: d.difficulty, y: d.impact, r: d.priority })),
+                    data: techData.filter(d => ['2025CVPR Sang NguyenQuang, Cheng-Wei Chen, Xiem HoangVan, Wen-Hsiao Peng', '2506.01229', 'ICME 2024 Md Adnan Faisal Hossain, Zhihao Duan, Fengqing Zhu', '2025CVPR Chuanbo Tang, Zhuoyuan Li, Yifan Bian, Li Li, Dong Liu'].includes(d.id)).map(d => ({ x: d.difficulty, y: d.impact, r: d.priority })),
                     backgroundColor: 'rgba(59, 130, 246, 0.6)',
                     borderColor: 'rgba(37, 99, 235, 1)',
                     borderWidth: 2
                 }, {
                     label: '中期 (6-12个月)',
-                    data: techData.filter(d => ['2405.08530', '2506.07709', '2505.09193'].includes(d.id)).map(d => ({ x: d.difficulty, y: d.impact, r: d.priority })),
+                    data: techData.filter(d => ['2405.08530', '2506.07709', '2025CVPR Wei Jiang, Junru Li, Kai Zhang, Li Zhang'].includes(d.id)).map(d => ({ x: d.difficulty, y: d.impact, r: d.priority })),
                     backgroundColor: 'rgba(16, 185, 129, 0.6)',
                     borderColor: 'rgba(5, 150, 105, 1)',
                     borderWidth: 2
