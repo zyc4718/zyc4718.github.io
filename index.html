@@ -89,7 +89,6 @@
             <section id="roadmap" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2 text-center">研究路线图与优先级</h2>
                 <p class="text-center text-gray-500 mb-8 max-w-3xl mx-auto">
-                    下图表展示各项技术的潜力影响与预估实现难度，气泡大小代表其优先级。高影响、低难度是短期优选，而高影响、高难度的技术代表了长期的大创新方向。
                 </p>
                 <div class="chart-container mb-12">
                     <canvas id="roadmapChart"></canvas>
@@ -142,7 +141,7 @@
                 category: '熵模型改进',
                 code: false,
                 impact: 7, difficulty: 5, priority: 8,
-                summary: '(6.17日阅读的ECVC改进)门控机制动态过滤上下文，结合非局部依赖建模。',
+                summary: '(7.8日开会讨论阅读的ECVC改进)门控机制动态过滤上下文，结合非局部依赖建模。',
                 problem: 'DCVC-RT的熵模型在处理遮挡或复杂运动时，无法有效评估和过滤包含噪声的时间先验，导致概率估计次优，浪费码率。',
                 analysis: '引入“双向上下文门控”机制，其核心思想是根据条件编码结果动态过滤上下文信息。尽管为B帧设计，其“门控”思想可改造用于DCVC-RT的单向预测，管理时间上下文的可靠性。',
                 integration: '改造为单向“时间上下文门控”模块，集成至DCVC-RT。小型网络根据时间上下文和当前帧特征生成调制图，逐元素乘到时间上下文上，端到端训练使其学会“关断”不可靠区域的先验影响。',
